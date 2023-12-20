@@ -23,7 +23,7 @@ app.resizable(1, 1)
 app.configure(background = '#ffffff')
 
 
-################################# CREATING FUNCTIONS FOR THE BUTTONS ####################################################
+## CREATING FUNCTIONS FOR THE BUTTONS 
 
 # creating a function for the cancel button
 def cancel():
@@ -60,8 +60,7 @@ def submit():
     msg.pack()
     
 
-
-################################# CREATING ALL THE REQUIRED WIDGETS/LABELS ETC. ##########################################
+##CREATING ALL THE REQUIRED WIDGETS/LABELS 
 
 # creating a frame to place all the tabs inside the frame
 main_frame = LabelFrame(app, width = 400, height = 725, bg = '#d3d3d3', border = 0)
@@ -76,10 +75,10 @@ main_head = Label(main_frame, font = ('Roboto', 18, 'bold'), text = "Student Man
 subhead = Label(main_frame, font = ('Roboto', 14), text = "New Student Registration", bg = '#d3d3d3')
 
 # adding the image inside a label with the university logo at the top
-scriptdir = os.path.dirname(os.path.realpath(__file__))         # a var with the file path 
-banner = Image.open(os.path.join(scriptdir, "BSULOGO.png"))     #  creating an image, and calling the file path and image file name
-logobsubanner = ImageTk.PhotoImage(banner)                      # this makes the image widget, and calls the img var 
-imglabel = Label(app, image = logobsubanner, height = 130)      # creating a label widget, to help display the image
+scriptdir = os.path.dirname(os.path.realpath(__file__))         
+banner = Image.open(os.path.join(scriptdir, "BSULOGO.png"))    
+logobsubanner = ImageTk.PhotoImage(banner)                      
+imglabel = Label(app, image = logobsubanner, height = 130)      
 # app.geometry(f"{banner.width}x700") 
 
 # creating the student name text label and the text box for the student name 
@@ -140,24 +139,24 @@ clear_btn = Button(sub_frame, font = ('Roboto', 10), text = "Clear", bg = '#1a2b
 
 
 
-################################## PACKING ALL THE REQURED ITEMS ########################################################
+##PACKING ALL THE REQURED ITEMS 
 
-imglabel.pack(side = TOP)                                         # packing the header image in the window
-main_frame.pack(side = TOP, pady = 10)                            # packing the main frame inside the app window
-main_head.pack(side =  TOP, padx = 10, pady = 5)                 # packing the main heading inside the mainframe
-subhead.pack(side = TOP, padx = 5, pady = 5)                     # packing the subheading inside the mainframe
-sub_frame.pack(side = TOP, padx = 5, pady = 5)                   # packing the subframe for placing the widgets accurately
-stdname.grid(row = 0, column = 0, pady = 5)                       # packing the student name label text in the mainframe
-stdtext.grid(row = 0, column = 1, pady = 5)                       # packing the textbox for student name   
-mobilenum.grid(row = 1, column = 0, pady = 5)                     # packing the mobile number label in the mainframe
-mobilenumtext.grid(row = 1, column = 1, pady = 5)                 # packing the text box for the mobile number in the mainframe
-email_id.grid(row = 2, column = 0, pady = 5)                      # packing the email id label inside the mainframe
-email_idbox.grid(row = 2, column = 1, pady = 5)                   # packing the text box for the email inside the mainframe
-homeaddress.grid(row = 3, column = 0, pady = 5)                   # packing the homeaddress label inside the mainframe
-homeaddressbox.grid(row = 3, column = 1, pady = 5)                # packing the homeaddress textbox inside the mainframe
-gender.grid(row  = 4, column = 0, pady = 5)                       # packing the gender label inside the mainframe
-genderdrop.grid(row = 4, column = 1, pady = 5)                    # packing the gender dropdowm menu to select from
-coursesenrolled.grid(row = 5, column = 0, pady = 5)               # packing the courses label in the mainframe
+imglabel.pack(side = TOP)                                         
+main_frame.pack(side = TOP, pady = 10)                            
+main_head.pack(side =  TOP, padx = 10, pady = 5)           
+subhead.pack(side = TOP, padx = 5, pady = 5)                     
+sub_frame.pack(side = TOP, padx = 5, pady = 5)                   
+stdname.grid(row = 0, column = 0, pady = 5)                      
+stdtext.grid(row = 0, column = 1, pady = 5)                       
+mobilenum.grid(row = 1, column = 0, pady = 5)                     
+mobilenumtext.grid(row = 1, column = 1, pady = 5)                 
+email_id.grid(row = 2, column = 0, pady = 5)                      
+email_idbox.grid(row = 2, column = 1, pady = 5)                   
+homeaddress.grid(row = 3, column = 0, pady = 5)                   
+homeaddressbox.grid(row = 3, column = 1, pady = 5)                
+gender.grid(row  = 4, column = 0, pady = 5)                       
+genderdrop.grid(row = 4, column = 1, pady = 5)                    
+coursesenrolled.grid(row = 5, column = 0, pady = 5)               
 
 # packing all the radio buttons
 course_rd1.grid(row = 5, column = 1, pady = 5)                    # course radio button 1
@@ -172,12 +171,12 @@ checkbox1.grid(row = 9, column = 1, pady = 5)                    # language 1
 checkbox2.grid(row = 9, column = 2, pady = 5)                    # language 2
 checkbox3.grid(row = 10, column = 1, pady = 5)                   # language 3
 
-rates.grid(row = 11, column = 0, pady = 5)                       # packing the communication skills rating message
-progressmeter.grid(row = 11, column = 1, pady = 5)               # packing the progress meter
+rates.grid(row = 11, column = 0, pady = 5)                      
+progressmeter.grid(row = 11, column = 1, pady = 5)               
 
-submit_btn.grid(row = 12, column = 0, padx = 10,pady = 5)        # packing the submit button
-clear_btn.grid(row = 12, column = 1, padx = 10,pady = 5)         # packing the clear button
+submit_btn.grid(row = 12, column = 0, padx = 10,pady = 5)        
+clear_btn.grid(row = 12, column = 1, padx = 10,pady = 5)         
 
 
-# using the mainloop function to run the window, loops the program unlimited number of times, until inturepted by anything
+# using the mainloop function to run the window...
 app.mainloop()
